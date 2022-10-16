@@ -7,21 +7,6 @@
     "test": "node_modules/.bin/mocha --recursive",
     "start": "node src/app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Luchoragusa/express-ttads.git"
-  },
-  "keywords": [
-    "nodejs",
-    "performance",
-    "testing"
-  ],
-  "author": "=",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Luchoragusa/express-ttads/issues"
-  },
-  "homepage": "https://github.com/Luchoragusa/express-ttads#readme",
   "devDependencies": {
     "should": "^9.0.2",
     "loadtest": "^1.4.3",
