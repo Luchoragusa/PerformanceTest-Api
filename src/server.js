@@ -2,9 +2,12 @@ const express = require('express');
 const app = express();
 const { find, all, create, update, del } = require('./controllers/projectController');
 
+app.disable('x-powered-by');
+app.disable('etag');
+
 //Rutas
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.json({ hello: 'world' });
     console.log('Hello World!');
 });
 
