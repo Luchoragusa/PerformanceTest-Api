@@ -2,7 +2,7 @@ var loadtest = require('loadtest');
 var should = require('should');
 
 describe("Performance Test", function() {
-    var noRequestPerHour = 100000;
+    var noRequestPerHour = 60000;
     var avgRequestTime = 1000;
 
     var host = 'http://localhost:3000'
