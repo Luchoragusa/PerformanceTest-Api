@@ -25,19 +25,19 @@ describe("Performance Test", function() {
 
         var operation = loadtest.loadTest(options, function(error) {
             if (error) {
-                console.error('Got an error: %s', error);
+                console.error('Hubo un error: %s', error);  
             } else if (operation.running == false) {
                 console.info("\n=========================================================================================================\n")
-                console.info("\tThreshold : No of request per hour = " + noRequestPerHour  + ", Avg request time in millis = " + avgRequestTime)
+                console.info("\tThreshold : No of request per hour = " + noRequestPerHour  + ", Tiempo promedio de request (milisegundos) = " + avgRequestTime)
                 console.info("\n=========================================================================================================\n")
-                console.info("Total Requests :", gLatency.totalRequests);
-                console.info("Total Failures :", gLatency.totalErrors);
-                console.info("Requests Per Second :", gLatency.rps);
-                console.info("Requests Per Hour :", (gLatency.rps * 3600));
-                console.info("Average Request Time(Mills) :", gLatency.meanLatencyMs);
-                console.info("Minimum Request Time(Mills) :", gLatency.minLatencyMs);
-                console.info("Maximum Request Time(Mills) :", gLatency.maxLatencyMs);
-                console.info("Percentiles :", gLatency.percentiles)
+                console.info("Requests totales :", gLatency.totalRequests);
+                console.info("Fallos totales :", gLatency.totalErrors);
+                console.info("Requests Por Segundo :", gLatency.rps);
+                console.info("Requests Por Hora :", (gLatency.rps * 3600));
+                console.info("Tiempo Promedio Requests(Mills) :", gLatency.meanLatencyMs);
+                console.info("Tiempo Minimo de Requests(Mills) :", gLatency.minLatencyMs);
+                console.info("Tiempo Maximo de Requests(Mills) :", gLatency.maxLatencyMs);
+                console.info("Porcentajes :", gLatency.percentiles)
                 console.info("\n=========================================================================================================\n")
 
                 gLatency.totalErrors.should.equal(0);
@@ -70,16 +70,16 @@ describe("Performance Test", function() {
                 console.error('Got an error: %s', error);
             } else if (operation.running == false) {
                 console.info("\n=========================================================================================================\n")
-                console.info("\tThreshold : No of request per hour = " + noRequestPerHour  + ", Avg request time in millis = " + avgRequestTime)
+                console.info("\tThreshold : No of request per hour = " + noRequestPerHour  + ", Tiempo promedio de request (milisegundos) = " + avgRequestTime)
                 console.info("\n=========================================================================================================\n")
-                console.info("Total Requests :", gLatency.totalRequests);
-                console.info("Total Failures :", gLatency.totalErrors);
-                console.info("Requests Per Second :", gLatency.rps);
-                console.info("Requests Per Hour :", (gLatency.rps * 3600));
-                console.info("Average Request Time(Mills) :", gLatency.meanLatencyMs);
-                console.info("Minimum Request Time(Mills) :", gLatency.minLatencyMs);
-                console.info("Maximum Request Time(Mills) :", gLatency.maxLatencyMs);
-                console.info("Percentiles :", gLatency.percentiles)
+                console.info("Requests totales :", gLatency.totalRequests);
+                console.info("Fallos totales :", gLatency.totalErrors);
+                console.info("Requests Por Segundo :", gLatency.rps);
+                console.info("Requests Por Hora :", (gLatency.rps * 3600));
+                console.info("Tiempo Promedio Requests(Mills) :", gLatency.meanLatencyMs);
+                console.info("Tiempo Minimo de Requests(Mills) :", gLatency.minLatencyMs);
+                console.info("Tiempo Maximo de Requests(Mills) :", gLatency.maxLatencyMs);
+                console.info("Porcentajes :", gLatency.percentiles)
                 console.info("\n=========================================================================================================\n")
 
                 gLatency.totalErrors.should.equal(0);
